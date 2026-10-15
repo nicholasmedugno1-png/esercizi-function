@@ -101,7 +101,17 @@ console.log(divisibilePer3o7(42));
 
 /* SCRIVI QUI LA TUA RISPOSTA */
 
-
+function invertiStringa(testo){
+   const myString = testo.split('')
+   const testoInvertito = []
+   console.log(myString)
+   for( let i = myString.length - 1; i >= 0; i--){
+    testoInvertito.push(myString[i])
+   }
+   testoInvertito.join('')
+   return testoInvertito
+}
+console.log(invertiStringa('ciao'))
 /* ESERCIZIO 8 — inizialiMaiuscole
    Funzione inizialiMaiuscole(frase): metti in maiuscolo la prima lettera di ogni parola.
    "ciao mondo" → "Ciao Mondo".
