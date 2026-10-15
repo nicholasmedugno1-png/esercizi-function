@@ -31,8 +31,8 @@ if( a === b) {
    return a + b;
 }
 };
-console.log(sommaPazza(4, 4));
-console.log(sommaPazza(2, 3));
+console.log(`il risultato e: ${sommaPazza(4, 4)}`);
+console.log(`il risultato e: ${sommaPazza(2, 3)}`);
 
 /* ESERCIZIO 3 — distanzaDa19
    Funzione distanzaDa19(n): ritorna Math.abs(n - 19).
@@ -50,8 +50,8 @@ function distanzaDa19(n) {
       return Math.abs(n -19)
    }
 };
-console.log(distanzaDa19(25));
-console.log(distanzaDa19(5));
+console.log(`la distanza moltiplicata per 3 dal numero 19 e: ${distanzaDa19(25)}`);
+console.log(`la distanza dal numero 19 e: ${distanzaDa19(5)}`);
 /* ESERCIZIO 4 — dentroIntervallo
    Funzione dentroIntervallo(n):
    true se n è tra 20 e 100 (compresi) oppure è esattamente 400.
@@ -133,7 +133,12 @@ console.log(inizialiMaiuscole('ciao mondo'))
    Usa slice. Prova con "EPICODE".
 */
 
+
 /* SCRIVI QUI LA TUA RISPOSTA */
+function togliPrimoEUltimo(testo) {
+      return testo.slice(1 , testo.length -1 )
+      }
+console.log(togliPrimoEUltimo('EPICODE'))
 
 /* ESERCIZIO 10 — dammiCasuali
    Funzione dammiCasuali(n): ritorna un array di n numeri interi casuali tra 0 e 10 (inclusi).
@@ -141,7 +146,15 @@ console.log(inizialiMaiuscole('ciao mondo'))
 */
 
 /* SCRIVI QUI LA TUA RISPOSTA */
-
+function dammiCasuali(n) {
+   const myNumber = [];
+   for(let i = 0 ; i < 10; i++){
+       const numeroCasuale = Math.floor(Math.random()* 11) ;
+      myNumber.push(numeroCasuale)
+   }
+   return myNumber
+}
+console.log(dammiCasuali())
 /* --EXTRA-- ESERCIZIO 11 — etaInGiorni
    Funzione etaInGiorni(annoNascita, meseNascita, giornoNascita).
    Ritorna l'età in giorni rispetto a oggi.
