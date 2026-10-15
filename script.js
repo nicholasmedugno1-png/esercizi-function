@@ -15,6 +15,7 @@ function  area(l1, l2) {
    return l1 * l2
    };
 console.log(area(3, 4));
+
 /* ESERCIZIO 2 — sommaPazza
    Funzione sommaPazza(a, b): ritorna a + b.
    Se a === b: ritorna (a + b) * 3.
@@ -32,6 +33,7 @@ if( a === b) {
 };
 console.log(sommaPazza(4, 4));
 console.log(sommaPazza(2, 3));
+
 /* ESERCIZIO 3 — distanzaDa19
    Funzione distanzaDa19(n): ritorna Math.abs(n - 19).
    Se n > 19: ritorna distanza * 3.
@@ -40,6 +42,16 @@ console.log(sommaPazza(2, 3));
 
 /* SCRIVI QUI LA TUA RISPOSTA */
 
+
+function distanzaDa19(n) {
+   if(n > 19 ) {
+      return Math.abs(n - 19)*3
+   } else {
+      return Math.abs(n -19)
+   }
+};
+console.log(distanzaDa19(25));
+console.log(distanzaDa19(5));
 /* ESERCIZIO 4 — dentroIntervallo
    Funzione dentroIntervallo(n):
    true se n è tra 20 e 100 (compresi) oppure è esattamente 400.
@@ -55,6 +67,15 @@ console.log(sommaPazza(2, 3));
 
 /* SCRIVI QUI LA TUA RISPOSTA */
 
+function epify(testo) {
+   if(testo.startsWith('EPICODE')){
+     return testo
+   } else {
+      return testo = 'EPICODE' + ' ' + testo
+   }
+};
+
+console.log(epify('ci insegna a programmare'));
 /* ESERCIZIO 6 — divisibilePer3o7
    Funzione divisibilePer3o7(n): true se n positivo E divisibile per 3 O per 7.
 */
@@ -69,6 +90,7 @@ console.log(sommaPazza(2, 3));
 
 /* SCRIVI QUI LA TUA RISPOSTA */
 
+
 /* ESERCIZIO 8 — inizialiMaiuscole
    Funzione inizialiMaiuscole(frase): metti in maiuscolo la prima lettera di ogni parola.
    "ciao mondo" → "Ciao Mondo".
@@ -76,7 +98,15 @@ console.log(sommaPazza(2, 3));
 */
 
 /* SCRIVI QUI LA TUA RISPOSTA */
-
+function inizialiMaiuscole(frase) {
+   const arrayFrase = frase.split(' ')
+   console.log(arrayFrase)
+   for( let i = 0; i < arrayFrase.length; i++) {
+     arrayFrase[i] = arrayFrase[i].slice(0, 1).toUpperCase() + arrayFrase[i].slice(1)
+      }
+   return arrayFrase.join(' ')
+}
+console.log(inizialiMaiuscole('ciao mondo'))
 /* ESERCIZIO 9 — togliPrimoEUltimo
    Funzione togliPrimoEUltimo(testo): rimuovi primo e ultimo carattere.
    Usa slice. Prova con "EPICODE".
