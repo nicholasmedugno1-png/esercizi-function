@@ -80,6 +80,17 @@ console.log(epify('ci insegna a programmare'));
    Funzione divisibilePer3o7(n): true se n positivo E divisibile per 3 O per 7.
 */
 
+function divisibilePer3o7(n) {
+   if( n > 0 && (n % 3 === 0 || n % 7 === 0)){
+      return true;
+      } else {
+      return false;
+      
+   }
+
+};
+console.log(divisibilePer3o7(42));
+
 /* SCRIVI QUI LA TUA RISPOSTA */
 
 /* ESERCIZIO 7 — invertiStringa
